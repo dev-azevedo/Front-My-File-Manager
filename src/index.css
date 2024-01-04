@@ -1,0 +1,21 @@
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  --primary: #ff4845;
+    --secondary: #ff745f;
+    --tertiary: #36173d;
+    --white: #eeeeee;
+}
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+button, a {
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+}
