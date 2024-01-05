@@ -6,6 +6,7 @@ import { IForder } from "./typeMain.ts";
 
 const Main = () => {
   const [folders, setFolders] = useState<Array<IForder> | null>(null);
+
   const getFolders = async () => {
     try {
       const { data } = await api.get("folder");
@@ -18,6 +19,7 @@ const Main = () => {
   useEffect(() => {
     getFolders();
   }, []);
+
   return (
     <S.ContainerMain>
       <S.Menu>

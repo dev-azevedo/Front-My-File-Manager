@@ -3,7 +3,7 @@ const colors = {
   secondary: "#ff745f",
   tertiary: "#36173d",
   white: "#eeeeee",
-  black: "#d5d5d5d",
+  black: "#555555",
 };
 
 export default colors;

@@ -29,7 +29,7 @@ export const ContainerContent = styled.section`
 export const ListFolders = styled.aside`
   width: 20%;
   min-width: 300px;
-  background-color: ${colors.secondary};
+  background-color: ${colors.white};
   height: calc(100vh - 60px);
   text-align: center;
   padding: 20px 12px 0 12px !important;
@@ -45,7 +45,7 @@ export const itemListFolder = styled.li`
   cursor: pointer;
 
   a {
-    color: ${colors.white};
+    color: ${colors.secondary};
     text-decoration: none;
   }
 `;
