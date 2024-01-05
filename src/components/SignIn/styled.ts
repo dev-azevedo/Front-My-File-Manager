@@ -23,8 +23,33 @@ export const Form = styled.form`
   }
 `;
 
+export const ContainerForgotPass = styled.div`
+  width: 100%;
+  height: 40px;
+`;
+
 export const ForgotPassword = styled.a`
   color: ${colors.secondary};
+  text-decoration: none !important;
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 18px;
+  outline: 0;
+  text-align: center;
+  margin-bottom: 10px !important;
+  background-color: ${colors.secondary};
+  border: 0;
+  color: ${colors.white};
+
+  :hover {
+    opacity: 0.4;
+    transform: scale(0.9);
+    transition: all 0.3s ease !important;
+  }
 `;
 
 export const SignUp = styled.button`

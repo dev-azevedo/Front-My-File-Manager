@@ -1,7 +1,12 @@
-import SignIn from "./views/Login";
+import RouterApp from "./router";
+import AppProvider from "./context/AppProvider";
 
 function App() {
-  return <SignIn />;
+  return (
+    <AppProvider>
+      <RouterApp />
+    </AppProvider>
+  );
 }
 
 export default App;
