@@ -49,3 +49,34 @@ export const itemListFolder = styled.li`
     text-decoration: none;
   }
 `;
+
+export const AddFolder = styled.button`
+  color: #aaa;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+
+  p {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  p:hover {
+    color: ${colors.primary};
+    transition: all 0.3s ease !important;
+  }
+`;
+
+export const SaveFolder = styled.button`
+  width: 100%;
+  color: ${colors.white};
+  background-color: ${colors.secondary};
+  border-radius: 5px;
+  border: 0;
+  padding: 5px !important;
+  margin-bottom: 10px !important;
+  font-size: 18px;
+  font-weight: bold;
+`;

@@ -2,41 +2,35 @@ import { useEffect, useState } from "react";
 import * as S from "./styled.ts";
 import { IFiles } from "./typeListFiles.ts";
 import { api } from "../../hooks/useApi.tsx";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ListFiles = () => {
   const { id } = useParams();
 
   const [files, setFiles] = useState<Array<IFiles> | null>(null);
-  const [newFiles, setNewFiles] = useState([]);
 
-  const addNewFiles = async (event) => {
-    // Verifica se algum arquivo foi selecionado
+  const addNewFiles = async (event: any) => {
     if (event.target.files.length > 0) {
-      const files = event.target.files;
-      const [nameFile, extension] = files[0].name.split(".");
-
+      const filesUpload = event.target.files;
+      const [nameFile, extension] = filesUpload[0].name.split(".");
+      const idFolder: any = id;
       const file = {
         nameFile,
         extension,
-        idFolder: id,
+        idFolder: parseInt(idFolder),
       };
       const { data } = await api.post("file", file);
 
-      console.log(data);
-      if (newFiles.length === 0) {
-        return setNewFiles(files);
-      }
+      setFiles((curr) => (curr ? [...curr, data] : [data]));
     }
   };
 
   const getFiles = async () => {
     try {
       const { data } = await api.get(`file/folder/${id}`);
-      console.log(data);
       setFiles(data);
     } catch (err: any) {
-      console.log(err.request.response);
+      console.error(err.request.response);
     }
   };
 
